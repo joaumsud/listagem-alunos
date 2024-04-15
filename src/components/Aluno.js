@@ -14,7 +14,7 @@ const Aluno = ({
   const history = useHistory();
 
   return (
-    <Card style={{ width: "18rem", height: "18rem" }} className="aluno">
+    <Card style={{ width: "18rem", height: "18rem", fontSize:'14px' }} className="aluno">
       <Card.Body className="card">
         <Card.Title className="aluno-title">{alunoNome}</Card.Title>
         <div className="aluno-details">
@@ -28,14 +28,14 @@ const Aluno = ({
         <div className="card-btn">
           <Button
             variant="primary"
-            className="button"
+            className="button-edita"
             onClick={() => history.push(`/edit/${id}`)}
           >
             Editar
           </Button>{" "}
           <Button
             variant="danger"
-            className="button"
+            className="button-excluir"
             onClick={() => handleRemoveAluno(id)}
           >
             Excluir
