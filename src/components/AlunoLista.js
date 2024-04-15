@@ -38,9 +38,10 @@ const AlunosLista = () => {
       </div>
       <ReactPaginate
         pageCount={Math.ceil(alunos.length / itemsPerPage)}
-        nextLabel="Próximo >"
-        previousLabel="< Anterior"
-        pageRangeDisplayed={5}
+        nextLabel=">>"
+        breakLabel="..."
+        previousLabel="<<"
+        pageRangeDisplayed={3}
         marginPagesDisplayed={2}
         onPageChange={handlePageChange}
         containerClassName={'pagination'}

@@ -14,7 +14,7 @@ const Aluno = ({
   const history = useHistory();
 
   return (
-    <Card style={{ width: "18rem", height: "18rem", fontSize:'14px' }} className="aluno">
+    <Card style={{ width: "25rem", height: "18rem", fontSize:'14px'}} className="aluno">
       <Card.Body className="card">
         <Card.Title className="aluno-title">{alunoNome}</Card.Title>
         <div className="aluno-details">
