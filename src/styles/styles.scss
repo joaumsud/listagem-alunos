@@ -171,21 +171,21 @@ h1 {
 }
 
 .pagination li a {
-  color: #007bff;
+  color: #eef1f5;
   text-decoration: none;
   padding: 8px 12px;
-  border: 1px solid #007bff;
+  border: 1px solid #818589;
   border-radius: 5px;
 }
 
 .pagination li a:hover {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #818589;
+  color: #eef1f5;
 }
 
 .pagination .active a {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #818589;
+  color: #eef1f5;
   pointer-events: none;
 }
 
