@@ -41,12 +41,17 @@ header {
 }
 
 h1 {
-  text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85,
-    -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606,
-    0 -80px 70px #973716, 10px -90px 80px #451b0e;
-  display: inline-block;
-  color: #666;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
+
 
 .main-content {
   width: 80%;
@@ -81,7 +86,7 @@ h1 {
   font-weight: bold;
 }
 
-.aluno .aluno-details > div {
+.aluno .aluno-details>div {
   margin-bottom: 0.5rem;
 }
 
@@ -113,15 +118,11 @@ h1 {
   border: 1px solid #cecece;
 }
 
-button {
-  margin-right: 5px;
-}
-
-.submit-btn {
-  margin-top: 1rem;
-}
-
-.autocomplete-btn {
+.form-btn {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
   margin-top: 1rem;
 }
 
@@ -148,6 +149,38 @@ button {
   margin-left: 10px;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.pagination li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.pagination li a {
+  color: #007bff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+}
+
+.pagination li a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.pagination .active a {
+  background-color: #007bff;
+  color: #fff;
+  pointer-events: none;
+}
+
 @media screen and (max-width: 400px) {
   h1 {
     font-size: 30px;
@@ -165,4 +198,31 @@ button {
   .main-form {
     width: 100%;
   }
+
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .card .date {
+    display: none;
+  }
+
+  .form-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .card-btn {
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
 }

@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
 import Cursos from "./Cursos";
-import axios from 'axios';
+import axios from "axios";
 
 const AlunoForm = (props) => {
-
   const [aluno, setAluno] = useState(() => {
     return {
       alunoNome: props.aluno ? props.aluno.alunoNome : "",
@@ -13,11 +12,11 @@ const AlunoForm = (props) => {
       curso: props.aluno ? props.aluno.curso : "",
       idade: props.aluno ? props.aluno.idade : "",
       date: props.aluno ? props.aluno.date : "",
-    }
+    };
   });
   const [errorMsg, setErrorMsg] = useState("");
   const { alunoNome, email, idade, curso } = aluno;
-  const [emailError, setEmailError] = useState('');
+  const [emailError, setEmailError] = useState("");
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
@@ -67,12 +66,12 @@ const AlunoForm = (props) => {
           }));
         }
         break;
-        case 'email':
-        if (value === '') {
-          setEmailError('Insira um e-mail válido.');
+      case "email":
+        if (value === "") {
+          setEmailError("Insira um e-mail válido.");
         } else {
           setAluno((prevState) => ({ ...prevState, [name]: value }));
-          setEmailError('');
+          setEmailError("");
         }
         break;
       default:
@@ -85,7 +84,7 @@ const AlunoForm = (props) => {
 
   const handleAutoComplete = async () => {
     try {
-      const response = await axios.get('https://randomuser.me/api/');
+      const response = await axios.get("https://randomuser.me/api/");
       const { results } = response.data;
       const { name, email, dob } = results[0];
       setAluno({
@@ -96,7 +95,7 @@ const AlunoForm = (props) => {
         idade: dob.age,
       });
     } catch (error) {
-      console.error('Erro ao buscar usuário:', error);
+      console.error("Erro ao buscar usuário:", error);
     }
   };
 
@@ -123,10 +122,12 @@ const AlunoForm = (props) => {
             name="email"
             value={email}
             placeholder="Insira o E-mail do aluno."
-            invalid={emailError ? "true" : "false"} 
+            invalid={emailError ? "true" : "false"}
             onChange={handleInputChange}
           />
-           <Form.Control.Feedback type="invalid">{emailError}</Form.Control.Feedback>
+          <Form.Control.Feedback type="invalid">
+            {emailError}
+          </Form.Control.Feedback>
         </Form.Group>
         <Form.Group controlId="curso">
           <Form.Label>curso</Form.Label>
@@ -150,10 +151,18 @@ const AlunoForm = (props) => {
             onChange={handleInputChange}
           />
         </Form.Group>
-        <Button variant="primary" type="submit" className="submit-btn">
-          Submit
-        </Button>
-        <Button variant="dark" className="autocomplete-btn" onClick={handleAutoComplete}>Auto Completar</Button>
+        <Form.Group className="form-btn">
+          <Button variant="primary" type="submit" className="submit-btn">
+            Enviar
+          </Button>
+          <Button
+            variant="dark"
+            className="autocomplete-btn"
+            onClick={handleAutoComplete}
+          >
+            Auto Completar
+          </Button>
+        </Form.Group>
       </Form>
     </div>
   );
