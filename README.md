@@ -22,3 +22,7 @@ Este é um projeto em React com intuito de demonstrar como fazer um formulário 
 2. Instale as dependências: `npm install`
 3. Execute o projeto: `npm start`
 4. Acesse o projeto no navegador: [http://localhost:3000](http://localhost:3000)
+
+## Link Vercel para verificação:
+
+- [https://listagem-alunos.vercel.app/](https://listagem-alunos.vercel.app/)
