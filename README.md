@@ -1,6 +1,6 @@
 # Formulário de Alunos em React
 
-Este é um projeto em React que consiste em um formulário de alunos. Utiliza a API "https://randomuser.me/api/?results=50" para obter dados aleatórios de alunos, e também inclui um componente chamado "cursos" para fornecer nomes para o campo "curso".
+Este é um projeto em React com intuito de demonstrar como fazer um formulário e como utilizar algumas técnicas de front-end.
 
 ## Funcionalidades
 
@@ -22,5 +22,3 @@ Este é um projeto em React que consiste em um formulário de alunos. Utiliza a 
 2. Instale as dependências: `npm install`
 3. Execute o projeto: `npm start`
 4. Acesse o projeto no navegador: [http://localhost:3000](http://localhost:3000)
-
-Divirta-se explorando o formulário de alunos em React!
